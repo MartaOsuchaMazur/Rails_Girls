@@ -9,11 +9,13 @@
       <th scope="col">Task</th>
       <th scope="col">Done</th>
       <th scope="col">Priority</th>
+      <th scope="col">User Name</th>
+      <th scope="col">Links</th>
     </tr>
   </thead>
   <tbody>
-    <% @todos.each do |todo| %>
-      <%= render todo %></tr>
+    <% @todos.each_with_index do |todo, index| %>
+      <%= render todo, index: index %></tr>
     <% end %>
   </tbody>
 </table>

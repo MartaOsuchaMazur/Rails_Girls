@@ -1,6 +1,8 @@
 <tr id="<%= dom_id todo %>" class="<%= todo.color %>"">
-  <th scope="row"><%= todo.id %></th>
+  <th scope="row"><%= index + 1 %></th>
   <td><%= todo.task %></td>
   <td><%= todo.done %></td>
   <td><%= todo.priority %></td>
+  <td><%= todo.username %></td>
+  <td><%= link_to "Edit", edit_todo_path(todo) %></td>
 </tr>
